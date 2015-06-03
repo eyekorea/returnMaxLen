@@ -1,15 +1,14 @@
 var arr = [1,2,1,2,3,3,4,2];
 function returnMaxLen (Arr){
   var tmpObj = {},
-      sortArr = Arr.sort(),
       i,key,
       keyLen = 0,
       returnData = [];
-   for(key in sortArr){
-     if(typeof tmpObj[sortArr[key]] === 'undefined'){
-       tmpObj[sortArr[key]] = 0;
+   for(key in Arr){
+     if(typeof tmpObj[Arr[key]] === 'undefined'){
+       tmpObj[Arr[key]] = 0;
      }else{
-       tmpObj[sortArr[key]] ++;
+       tmpObj[Arr[key]] ++;
      }
    }
   for(key in tmpObj){
